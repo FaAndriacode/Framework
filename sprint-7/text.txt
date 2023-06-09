@@ -1,0 +1,28 @@
+-le front servelet support
+	int ou string	
+-importer le jar
+-le web xml doit contenir ceci 
+	<servlet>
+      		<servlet-name>FrontServlet</servlet-name>
+      		<servlet-class>etu1763.framework.servlet.Front_Servlet</servlet-class>
+      		<init-param>
+            		<param-name>packClass</param-name>
+            		<param-value>chemin vers le .class(Absolue)</param-value>
+       		</init-param>
+    	</servlet>
+    <servlet-mapping>
+      <servlet-name>FrontServlet</servlet-name>
+      <url-pattern>*.run</url-pattern>
+    </servlet-mapping>
+-chaque url dois etre annoter par une methode
+	@URLMapping(valeur="/exemple.run")
+	importer la classe
+-Modelview
+	importer modelview
+	pour l'utiliser
+		retourner un view utiliser la methode setview qui return un modelview
+			-mv.setView("exemple.jsp");
+				-la page exemple.jsp dois figurer dans votre page a afficher
+			-pour l'afficher au view
+				mv.AddItems("exemple", exemple)
+					-Exemple est un "ArrayList"
