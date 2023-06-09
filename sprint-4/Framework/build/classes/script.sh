@@ -1,0 +1,1 @@
+jar -cvf /Users/andriniaina/NetBeansProjects/Framework/dist/Framework.jar *
