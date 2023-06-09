@@ -1,1 +1,0 @@
-jar -cvf testFramework.war *
